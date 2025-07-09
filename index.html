@@ -1,299 +1,364 @@
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-  <head><script src="./assets/js/color-modes.js"></script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Tora: ">
-    <meta name="generator" content="Hugo 0.115.4">
-    <title>Tora</title>
+<head>
+  <script src="./assets/js/color-modes.js"></script>
 
-    <link rel="icon" href="./assets/images/ali.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tora">
+  <meta name="generator" content="Hugo 0.115.4">
+  <title>Tora</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+  <link rel="icon" href="./assets/images/ali.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
 
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
 
-      .text-highlight {
-        color: #e06766;
-      }
+    .text-highlight {
+      color: #e06766;
+    }
 
+    .hover-text {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      height: 150px;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
       .hover-text {
-        color: black;
-        word-wrap: break-word; 
-        overflow-wrap: break-word;
-        max-width: 100%; 
-        height: 150px; 
-        overflow-y: auto; 
-        padding: 10px; 
-        border: 1px solid #ccc; 
-        border-radius: 5px; 
+        height: 80px;
+        /* 更小屏幕的高度 */
+        font-size: 14px;
       }
-      @media (max-width: 600px) {
-        .hover-text {
-            height: 80px; /* 更小屏幕的高度 */
-            font-size: 14px;
-        }
-      }
+    }
 
-      @media (max-width: 400px) {
-          .hover-text {
-              height: 60px; /* 更小屏幕的高度 */
-              font-size: 8px;
-          }
+    @media (max-width: 400px) {
+      .hover-text {
+        height: 60px;
+        /* 更小屏幕的高度 */
+        font-size: 8px;
       }
+    }
+
+    /* 隐藏滚动条 */
+    .hover-text::-webkit-scrollbar {
+      width: 0;
       /* 隐藏滚动条 */
-      .hover-text::-webkit-scrollbar {
-          width: 0; /* 隐藏滚动条 */
-          background: transparent; /* 滚动条背景透明 */
-      }
-      
-    </style>
+      background: transparent;
 
-    <!-- Custom styles for this template -->
-    <link href="./assets/cover.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  </head>
-  <body class="text-center text-bg-dark">
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+      /* 滚动条背景透明 */
+    }
+  </style>
 
+  <!-- Custom styles for this template -->
+  <link href="./assets/cover.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+
+<body class="text-center bg-dark text-light">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="justify-content: center;">
+    <!-- <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div> -->
+    <div class="navbar-menu is-active has-background-dark has-text-light">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item has-background-dark has-text-light" href="https://github.com/alibaba/Tora">
+          <span class="icon">
+            <svg class="svg-inline--fa fa-home fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas"
+              data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+              <path fill="currentColor"
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+              </path>
+            </svg><!-- <i class="fas fa-home"></i> Font Awesome fontawesome.com -->
+          </span>
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link has-background-dark has-text-light">
+            More Research
+          </a>
+          <div class="navbar-dropdown has-background-dark has-text-light">
+            <a class="navbar-item has-background-dark has-text-light" href="https://ali-videoai.github.io/Tora2_page/">
+              Tora2
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
 
   <main>
 
-    <section class="text-center container min-vh-100">
+    <section class="text-center container min-vh-100 ">
 
-        <div class="row py-5">
-            <div class="bg-video" id="bgvideocontainer">
-                <div class="vimeo_player_wrapper" style="position: absolute; z-index: 0; width: 100%; height: 100%; left: 0px; top: 0px; overflow: hidden; opacity: 0.5;" data-vimeo-initialized="true">
-                  <div class="video-wrapper">
-                    <img id="bgvideo" muted autoplay="autoplay" loop="loop" src="./assets/videos/panda_tora.png" style="width: auto; height: 100%;"></img>
-                  </div>
-                </div>
+      <div class="row py-5">
+        <div class="bg-video" id="bgvideocontainer">
+          <div class="vimeo_player_wrapper"
+            style="position: absolute; z-index: 0; width: 100%; height: 100%; left: 0px; top: 0px; opacity: 0.5;"
+            data-vimeo-initialized="true">
+            <div class="video-wrapper">
+              <img id="bgvideo" muted autoplay="autoplay" loop="loop" src="./assets/videos/panda_tora.png"
+                style="width: auto; height: 100%; max-width: none; object-fit: cover;"></img>
             </div>
-            
-            <div class="mx-auto" style="margin-top: 16%; filter: saturate(1); opacity: 0.90;">
-                <h1 class="display-2 fw-bold title">
-                  <a style="color: #cfc42f;">T</a><a style="color: #b06d51;">o</a><a style="color: #66b5e0;">r</a><a style="color: #6bf7cb;">a</a>: 
-                  <a class="display-4">Trajectory-oriented Diffusion Transformer for Video Generation</a>
-                </h1>
-                <p class="author-list">
-                    Zhenghao Zhang<sup>*</sup>&emsp;
-                    Junchao Liao<sup>*</sup>&emsp;
-                    Menghao Li&emsp;
-                    ZuoZhuo Dai
-                    <br>
-                    Bingxue Qiu&emsp;
-                    Siyu Zhu&emsp;
-                    Long Qin&emsp;
-                    Weizhi Wang
-                    <!-- <a href='https://ycgu.site/' target='_blank'>Yuchao Gu<sup></sup></a>&emsp; -->
-                    <!-- <a href='https://scholar.google.com/citations?user=No9OsocAAAAJ&hl=en' target='_blank'>Difei Gao<sup></sup></a>&emsp; -->
-                    <!-- <a href='https://sites.google.com/view/showlab/home?authuser=0' target='_blank'>Mike Zheng Shou<sup>&#x2709</sup></a> -->
-                </p>
-                <p class="institution-list">
-                    <a href='' target=''>Alibaba Group</a>
-                    <br>
-                    <sup>*</sup>Equal Contribution
-                    <br>
-                    📢 Update: We released our inference code and model weights at <a href="https://github.com/alibaba/Tora" target="_blank">https://github.com/alibaba/Tora</a>
-                </p>
-                <p>
-                
-                <a href="https://arxiv.org/abs/2407.21705" class="btn btn-outline-light" target="_blank">
-                    arXiv
-                </a>
-                <a href="https://github.com/alibaba/Tora" class="btn btn-outline-light" target="_blank">
-                  Github
-              </a>
-
-                </p>
-            </div>
+          </div>
         </div>
-    </section>
-  
-    <div class="album py-5 bg-body-tertiary">
-    
-    </br></br>
 
-      
+        <div class="mx-auto" style="margin-top: 16%; filter: saturate(1); opacity: 0.90;">
+          <h1 class="display-2 fw-bold title has-text-light">
+            <span style="color: #cfc42f;">T</span><span style="color: #b06d51;">o</span><span
+              style="color: #66b5e0;">r</span><span style="color: #6bf7cb;">a</span>:
+            <span class="display-4">Trajectory-oriented Diffusion Transformer for Video Generation</span>
+          </h1>
+          <h2>CVPR 25</h2>
+          <p class="author-list">
+            Zhenghao Zhang<sup>*</sup>&emsp;
+            Junchao Liao<sup>*</sup>&emsp;
+            Menghao Li&emsp;
+            ZuoZhuo Dai
+            <br>
+            Bingxue Qiu&emsp;
+            Siyu Zhu&emsp;
+            Long Qin&emsp;
+            Weizhi Wang
+            <!-- <a href='https://ycgu.site/' target='_blank'>Yuchao Gu<sup></sup></a>&emsp; -->
+            <!-- <a href='https://scholar.google.com/citations?user=No9OsocAAAAJ&hl=en' target='_blank'>Difei Gao<sup></sup></a>&emsp; -->
+            <!-- <a href='https://sites.google.com/view/showlab/home?authuser=0' target='_blank'>Mike Zheng Shou<sup>&#x2709</sup></a> -->
+          </p>
+          <p class="institution-list">
+            <a href='' target=''>Alibaba Group</a>
+            <br>
+            <sup>*</sup>Equal Contribution
+            <br>
+          </p>
+          <p>
+
+            <a href="https://arxiv.org/abs/2407.21705" class="btn btn-outline-light" target="_blank">
+              arXiv
+            </a>
+            <a href="https://github.com/alibaba/Tora" class="btn btn-outline-light" target="_blank">
+              Github
+            </a>
+
+          </p>
+          <p>
+            📢 Update: 🔥🔥 Our latest work, Tora2, has been accepted by ACM MM25. Tora2 builds on Tora with design
+            improvements, enabling enhanced appearance and motion customization for multiple entities. See Project page:
+            <a href="https://ali-videoai.github.io/Tora2_page/">https://ali-videoai.github.io/Tora2_page/</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary text-body">
+
+      </br></br>
+
+
       <!-- Part 1, no traj  -->
       <div class="container">
         <!-- landscape screen -->
         <!--            phone      pad            computer     span -->
         <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3 g-3">
-        <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="video-container"> -->
+          <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="video-container"> -->
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-1-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A close-up shot reveals two roses, one in vibrant purple and the other in sunny yellow, swaying gently in unison against the backdrop of a snow-covered mountain range. The video meticulously highlights the striking contrast between the vivid colors of the roses and the pristine whiteness of the mountains. The delicate movements of the roses are captured with precision, enhancing the visual harmony and captivating the viewer with the interplay of color and nature. The scene remains free of additional text or objects, focusing solely on the enchanting beauty of the roses amidst the majestic mountain landscape.</br></br></br></br></h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-1-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A close-up shot reveals two roses, one in vibrant purple and the other in sunny
+                    yellow, swaying gently in unison against the backdrop of a snow-covered mountain range. The video
+                    meticulously highlights the striking contrast between the vivid colors of the roses and the pristine
+                    whiteness of the mountains. The delicate movements of the roses are captured with precision,
+                    enhancing the visual harmony and captivating the viewer with the interplay of color and nature. The
+                    scene remains free of additional text or objects, focusing solely on the enchanting beauty of the
+                    roses amidst the majestic mountain landscape.</br></br></br></br></h7>
                 </div>
               </div>
-          </div>
-          
-          <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-1-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A vintage wooden sailboat glides steadily down a mist-covered river, surrounded by dense, lush green forest. The boat takes center stage, its timeless elegance highlighted by the ethereal mist that envelops the scene, creating a mystical atmosphere. The video captures the serene journey, emphasizing the untouched beauty of nature. The scene remains free of additional text or objects, allowing viewers to be fully immersed in the tranquil and almost otherworldly setting as the sailboat cuts through the still waters.</h7>
-                  </div>
-                </div>
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-2-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A flock of seagulls soars gracefully through a vibrant underwater world teeming with colorful coral reefs. The video captures the surreal combination of seagulls flying underwater, their smooth movements in stark contrast to the lush corals surrounding them. The background is a vivid tapestry of oceanic hues, alive with the swaying forms of corals, creating a dreamlike atmosphere. The scene is devoid of additional text or objects, allowing the viewer to fully immerse in the fantastical and harmonious blend of avian grace and underwater wonder.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-1-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A vintage wooden sailboat glides steadily down a mist-covered river, surrounded
+                    by dense, lush green forest. The boat takes center stage, its timeless elegance highlighted by the
+                    ethereal mist that envelops the scene, creating a mystical atmosphere. The video captures the serene
+                    journey, emphasizing the untouched beauty of nature. The scene remains free of additional text or
+                    objects, allowing viewers to be fully immersed in the tranquil and almost otherworldly setting as
+                    the sailboat cuts through the still waters.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-1-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A picturesque countryside scene with rolling green hills, dotted with quaint cottage houses and a charming farmhouse with a chimney. The foreground features a gently flowing stream with a wooden fence along its banks and a path winding through fields of wildflowers. Puffy white clouds float in a clear blue sky. The camera moves left to reveal more of the idyllic landscape, including additional houses and trees.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-2-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A flock of seagulls soars gracefully through a vibrant underwater world teeming
+                    with colorful coral reefs. The video captures the surreal combination of seagulls flying underwater,
+                    their smooth movements in stark contrast to the lush corals surrounding them. The background is a
+                    vivid tapestry of oceanic hues, alive with the swaying forms of corals, creating a dreamlike
+                    atmosphere. The scene is devoid of additional text or objects, allowing the viewer to fully immerse
+                    in the fantastical and harmonious blend of avian grace and underwater wonder.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-2-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A crucian carp swims gracefully across the red, rocky surface of Mars. The video focuses on the fluid motion of the carp, contrasting sharply with the striking Martian landscape. The stark juxtaposition of the aquatic life and the desolate Martian terrain underscores the dreamlike atmosphere, drawing viewers into this otherworldly scenario. No additional text or objects are present, allowing the viewer to fully appreciate the intriguing and unexpected fusion of elements.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-1-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A picturesque countryside scene with rolling green hills, dotted with quaint
+                    cottage houses and a charming farmhouse with a chimney. The foreground features a gently flowing
+                    stream with a wooden fence along its banks and a path winding through fields of wildflowers. Puffy
+                    white clouds float in a clear blue sky. The camera moves left to reveal more of the idyllic
+                    landscape, including additional houses and trees.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-2-2_.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">Two men cycle steadily along a highway under a clear, sunny sky. The video captures the rhythmic cadence of their pedaling and the long, seemingly endless stretch of the highway ahead. The background, lined with expansive farmlands, enhances the sense of movement and freedom. The scene is devoid of additional text or distractions, allowing viewers to fully immerse in the simplicity and liberation of the journey, highlighting the harmony between the cyclists and the vast, open agricultural landscape.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-2-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A crucian carp swims gracefully across the red, rocky surface of Mars. The
+                    video focuses on the fluid motion of the carp, contrasting sharply with the striking Martian
+                    landscape. The stark juxtaposition of the aquatic life and the desolate Martian terrain underscores
+                    the dreamlike atmosphere, drawing viewers into this otherworldly scenario. No additional text or
+                    objects are present, allowing the viewer to fully appreciate the intriguing and unexpected fusion of
+                    elements.</h7>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="col" data-item>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-2-2_.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">Two men cycle steadily along a highway under a clear, sunny sky. The video
+                    captures the rhythmic cadence of their pedaling and the long, seemingly endless stretch of the
+                    highway ahead. The background, lined with expansive farmlands, enhances the sense of movement and
+                    freedom. The scene is devoid of additional text or distractions, allowing viewers to fully immerse
+                    in the simplicity and liberation of the journey, highlighting the harmony between the cyclists and
+                    the vast, open agricultural landscape.</h7>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -301,75 +366,104 @@
         </br>
         <!-- vertical screen -->
         <div class="row row-cols-5 row-cols-sm-5 row-cols-md-5 g-3">
-          
+
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-3-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A captivating snowflake glass ball revolves gently, set against a static winter display shelf in the background. The camera lingers on the intricate details within the glass, highlighting the delicate, crystalline patterns of the snowflake. Surrounding the centerpiece are various winter-themed decorations that enhance the festive ambiance. The backdrop remains consistently enchanting, evoking a serene and magical winter wonderland. The video invites viewers to appreciate the artistry and seasonal charm encapsulated within the snowflake glass ball, focusing solely on the elegance of the display without additional elements.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-3-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A captivating snowflake glass ball revolves gently, set against a static winter
+                    display shelf in the background. The camera lingers on the intricate details within the glass,
+                    highlighting the delicate, crystalline patterns of the snowflake. Surrounding the centerpiece are
+                    various winter-themed decorations that enhance the festive ambiance. The backdrop remains
+                    consistently enchanting, evoking a serene and magical winter wonderland. The video invites viewers
+                    to appreciate the artistry and seasonal charm encapsulated within the snowflake glass ball, focusing
+                    solely on the elegance of the display without additional elements.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-3-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">In a sunlit, verdant meadow, a joyful brown puppy sits contentedly on the lush green grass, its tail gently wagging with happiness. The video captures the delightful moment as the puppy turns its head with curiosity and bliss, its eyes sparkling with playful energy. The simple, expansive field in the background serves to highlight the puppy's cheerful demeanor, free from any distractions. The scene is bathed in warm sunlight, enhancing the natural beauty and serene atmosphere of the moment. This video beautifully encapsulates the innocent joy and wonder of the puppy's carefree existence.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-3-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">In a sunlit, verdant meadow, a joyful brown puppy sits contentedly on the lush
+                    green grass, its tail gently wagging with happiness. The video captures the delightful moment as the
+                    puppy turns its head with curiosity and bliss, its eyes sparkling with playful energy. The simple,
+                    expansive field in the background serves to highlight the puppy's cheerful demeanor, free from any
+                    distractions. The scene is bathed in warm sunlight, enhancing the natural beauty and serene
+                    atmosphere of the moment. This video beautifully encapsulates the innocent joy and wonder of the
+                    puppy's carefree existence.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-3-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A serene and captivating close-up shot of grass swaying gently in the wind. Each blade of grass moves in a rhythmic dance, the subtle undulations highlighted by the breeze. The background is softly blurred, ensuring the focus remains on the delicate movement of the grass, enhancing the calming and tranquil ambiance of the scene. The interplay of light and shadow on the green blades contributes to a harmonious, natural aesthetic that embodies peacefulness and simplicity. There are no extraneous texts or objects within the frame, allowing the viewer to fully immerse in the serene beauty of nature.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-3-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A serene and captivating close-up shot of grass swaying gently in the wind.
+                    Each blade of grass moves in a rhythmic dance, the subtle undulations highlighted by the breeze. The
+                    background is softly blurred, ensuring the focus remains on the delicate movement of the grass,
+                    enhancing the calming and tranquil ambiance of the scene. The interplay of light and shadow on the
+                    green blades contributes to a harmonious, natural aesthetic that embodies peacefulness and
+                    simplicity. There are no extraneous texts or objects within the frame, allowing the viewer to fully
+                    immerse in the serene beauty of nature.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-3-4_.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">Two luminous lanterns ascend simultaneously into the night sky, their warm, gentle glow standing out vividly against the dark backdrop. Rising in perfect harmony, they create a serene and magical ascent, their soft light painting a tranquil picture. The scene unfolds in a quiet, open area, devoid of any other distractions, allowing the viewer's attention to focus solely on the ethereal beauty of the lanterns' flight. The stillness of the night is accentuated by the absence of other elements, making the moment feel profoundly peaceful.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-3-4_.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">Two luminous lanterns ascend simultaneously into the night sky, their warm,
+                    gentle glow standing out vividly against the dark backdrop. Rising in perfect harmony, they create a
+                    serene and magical ascent, their soft light painting a tranquil picture. The scene unfolds in a
+                    quiet, open area, devoid of any other distractions, allowing the viewer's attention to focus solely
+                    on the ethereal beauty of the lanterns' flight. The stillness of the night is accentuated by the
+                    absence of other elements, making the moment feel profoundly peaceful.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/1-3-5_.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">On a bright, sunlit day, two adorable kittens walk side by side along the golden sands of a serene beach. The camera faithfully follows their gentle movements, capturing every delicate paw print and graceful stride. In the background, gentle waves softly lap against the shore under a vast, clear blue sky, where the horizon seems to blend seamlessly with the sea. The sunlight bathes the beach in a warm, golden glow, enhancing the tranquil and harmonious atmosphere of the scene. This creates a peaceful and charming coastal tableau, perfect in its simplicity and beauty.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/1-3-5_.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">On a bright, sunlit day, two adorable kittens walk side by side along the
+                    golden sands of a serene beach. The camera faithfully follows their gentle movements, capturing
+                    every delicate paw print and graceful stride. In the background, gentle waves softly lap against the
+                    shore under a vast, clear blue sky, where the horizon seems to blend seamlessly with the sea. The
+                    sunlight bathes the beach in a warm, golden glow, enhancing the tranquil and harmonious atmosphere
+                    of the scene. This creates a peaceful and charming coastal tableau, perfect in its simplicity and
+                    beauty.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
         </div>
@@ -380,23 +474,24 @@
             <button class="btn btn-outline-dark" id="loadMoreBtn">Load More</button>
         </div> -->
       </div>
-    </br></br>
+      </br></br>
       <!-- A part, trajectory control-->
-      <div class="container" style="color: black;">
+      <div class="container">
         <h4>
-            <b>Trajectory Control</b>
+          <b>Trajectory Control</b>
 
         </h4>
         <p class="text-align: justify;">
-          Tora ensures  the generated movements precisely follow the specified trajectories while authentically replicating the dynamics of the physical world.
-            <!-- given a sequence of camera poses. -->
+          Tora ensures the generated movements precisely follow the specified trajectories while authentically
+          replicating the dynamics of the physical world.
+          <!-- given a sequence of camera poses. -->
         </p>
 
       </div>
 
       <div class="container">
 
-        <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-3" style="color: black;">
+        <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-3">
           <div class="col">trajectory/image</div>
           <div class="col">sample 1</div>
           <div class="col">sample 2</div>
@@ -409,120 +504,152 @@
 
           <div class="col" data-item>
             <div class="card hover-card">
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h5 class="card-title">example</h5>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-1-0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A single soap bubble floats gently, rising amidst a field of blooming wildflowers. The video captures the bubble's delicate and iridescent nature, set against a beautiful floral backdrop. The colorful wildflowers sway softly in the background, enhancing the bubble's ephemeral beauty. The scene remains devoid of additional text or objects, allowing viewers to fully immerse themselves in the serene and captivating moment, highlighting the fragility and transient charm of the bubble amidst the vibrant natural surroundings.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-1-0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A single soap bubble floats gently, rising amidst a field of blooming
+                    wildflowers. The video captures the bubble's delicate and iridescent nature, set against a beautiful
+                    floral backdrop. The colorful wildflowers sway softly in the background, enhancing the bubble's
+                    ephemeral beauty. The scene remains devoid of additional text or objects, allowing viewers to fully
+                    immerse themselves in the serene and captivating moment, highlighting the fragility and transient
+                    charm of the bubble amidst the vibrant natural surroundings.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-1-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A red helium balloon floats slowly upward into the sky over a barren desert and expansive Gobi landscape. The camera tracks the balloon's ascent, capturing its vivid color against the stark, arid terrain below. The endless stretches of sand and gravel provide a striking contrast to the balloon’s bright and buoyant presence. No additional text or objects intrude upon the scene, allowing viewers to fully immerse themselves in the serene and contemplative journey of the balloon as it rises against the boundless desert backdrop.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-1-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A red helium balloon floats slowly upward into the sky over a barren desert and
+                    expansive Gobi landscape. The camera tracks the balloon's ascent, capturing its vivid color against
+                    the stark, arid terrain below. The endless stretches of sand and gravel provide a striking contrast
+                    to the balloon’s bright and buoyant presence. No additional text or objects intrude upon the scene,
+                    allowing viewers to fully immerse themselves in the serene and contemplative journey of the balloon
+                    as it rises against the boundless desert backdrop.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-1-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A jellyfish floats upward near the ocean floor, its translucent body pulsating gracefully with each movement. The camera captures the mysterious underwater environment, focusing solely on the jellyfish's elegant ascent against the dark, deep-toned water. The seabed below is dimly lit, adding to the ethereal and almost otherworldly atmosphere. The scene is devoid of additional text or objects, allowing viewers to fully immerse themselves in the mesmerizing and serene dance of the jellyfish amidst the vast, shadowy depths of the ocean.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-1-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A jellyfish floats upward near the ocean floor, its translucent body pulsating
+                    gracefully with each movement. The camera captures the mysterious underwater environment, focusing
+                    solely on the jellyfish's elegant ascent against the dark, deep-toned water. The seabed below is
+                    dimly lit, adding to the ethereal and almost otherworldly atmosphere. The scene is devoid of
+                    additional text or objects, allowing viewers to fully immerse themselves in the mesmerizing and
+                    serene dance of the jellyfish amidst the vast, shadowy depths of the ocean.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
         </div>
 
-          </br>
-         <!-- landscape screen, row 2 -->
-         <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-3">
+        </br>
+        <!-- landscape screen, row 2 -->
+        <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-3">
 
           <div class="col" data-item>
             <div class="card hover-card">
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h5 class="card-title">example</h5>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-3-1_.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">Amidst a serene twilight setting, a teddy bear sits cheerfully on a skateboard, illuminated softly against the starlit sky.  The video captures the endearing motion of the teddy bear as it sways gently from side to side, creating a whimsical and heartwarming scene.  The dark silhouette of forest trees in the background adds to the quaint charm, evoking a sense of peaceful solitude.  The scene allows viewers to fully immerse themselves in the warm and gentle movements of the teddy bear, its quiet joy set against the tranquil, starry night.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-3-1_.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">Amidst a serene twilight setting, a teddy bear sits cheerfully on a skateboard,
+                    illuminated softly against the starlit sky. The video captures the endearing motion of the teddy
+                    bear as it sways gently from side to side, creating a whimsical and heartwarming scene. The dark
+                    silhouette of forest trees in the background adds to the quaint charm, evoking a sense of peaceful
+                    solitude. The scene allows viewers to fully immerse themselves in the warm and gentle movements of
+                    the teddy bear, its quiet joy set against the tranquil, starry night.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-3-2_.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A serene wide-angle shot captures a sunflower gently swaying in the breeze, set against the backdrop of an expansive golden wheat field under the setting sun. The scene emphasizes the delicate movement of the sunflower, which stands tall amid the endless sea of wheat, bathed in the warm, orange glow of the sunset. The golden hues of the wheat field glisten in the twilight, adding depth and richness to the landscape. As the wind rustles through the fields, the camera lingers on the sunflower, highlighting its vibrant petals and the intricate details of its seeds. The video, devoid of any text or additional objects, immerses the viewer in the tranquil beauty and the harmonious dance between nature and light.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-3-2_.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A serene wide-angle shot captures a sunflower gently swaying in the breeze, set
+                    against the backdrop of an expansive golden wheat field under the setting sun. The scene emphasizes
+                    the delicate movement of the sunflower, which stands tall amid the endless sea of wheat, bathed in
+                    the warm, orange glow of the sunset. The golden hues of the wheat field glisten in the twilight,
+                    adding depth and richness to the landscape. As the wind rustles through the fields, the camera
+                    lingers on the sunflower, highlighting its vibrant petals and the intricate details of its seeds.
+                    The video, devoid of any text or additional objects, immerses the viewer in the tranquil beauty and
+                    the harmonious dance between nature and light.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-3-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">In a serene outdoor setting, a delicate glass jar hangs, gently swaying from side to side in the soft breeze.  The video captures the jar's subtle motion against a soothing backdrop of blurred, lush greenery, bathed in natural light.  With a focused close-up, the camera reveals intricate details of the jar’s smooth surface and the soft reflections dancing upon it.  The play of light and shadow enhances the tranquil and harmonious atmosphere. Its simplicity and elegance amplifying the peacefulness of the natural surroundings.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-3-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">In a serene outdoor setting, a delicate glass jar hangs, gently swaying from
+                    side to side in the soft breeze. The video captures the jar's subtle motion against a soothing
+                    backdrop of blurred, lush greenery, bathed in natural light. With a focused close-up, the camera
+                    reveals intricate details of the jar’s smooth surface and the soft reflections dancing upon it. The
+                    play of light and shadow enhances the tranquil and harmonious atmosphere. Its simplicity and
+                    elegance amplifying the peacefulness of the natural surroundings.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
         </div>
@@ -532,58 +659,82 @@
         <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-3">
           <div class="col" data-item>
             <div class="card hover-card">
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%" onloadedmetadata="this.playbackRate=2">
-                  <source src="./assets/tora_pr_video/2-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%"
+                onloadedmetadata="this.playbackRate=2">
+                <source src="./assets/tora_pr_video/2-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h5 class="card-title">example</h5>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%" onloadedmetadata="this.playbackRate=2">
-                  <source src="./assets/tora_pr_video/2-2-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A solitary maple leaf descends gracefully from left to right against the backdrop of a tranquil lake, surrounded by a frame of vibrant maple trees. The video captures the leaf’s elegant fall in exquisite detail, creating a striking contrast between its gentle motion and the stillness of the water. The scene exudes a sense of calm as the maple leaf floats downward. The video focuses solely on this peaceful moment, with no additional text or objects present, creating an immersive experience that highlights the delicate balance of movement and stillness in nature.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%"
+                onloadedmetadata="this.playbackRate=2">
+                <source src="./assets/tora_pr_video/2-2-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A solitary maple leaf descends gracefully from left to right against the
+                    backdrop of a tranquil lake, surrounded by a frame of vibrant maple trees. The video captures the
+                    leaf’s elegant fall in exquisite detail, creating a striking contrast between its gentle motion and
+                    the stillness of the water. The scene exudes a sense of calm as the maple leaf floats downward. The
+                    video focuses solely on this peaceful moment, with no additional text or objects present, creating
+                    an immersive experience that highlights the delicate balance of movement and stillness in nature.
+                  </h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%" onloadedmetadata="this.playbackRate=2">
-                  <source src="./assets/tora_pr_video/2-2-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">In the tranquil serenity of a quiet meadow, a single feather descends slowly and gracefully from the sky. As it floats through the gentle breeze, the camera meticulously tracks its delicate and effortless dance against a backdrop of lush green grass. The scene captures the essence of peacefulness, with the feather's light, airy movement standing out in contrast to the vibrant foliage. The feather sways gently, as if whispering secrets to the winds, before finally coming to rest softly upon the meadow's verdant carpet. This moment of natural beauty is enriched by the stillness of the atmosphere. The camera's elegant focus on the feather, uninterrupted by any additional text or objects, allows viewers to fully immerse themselves in the grace and simplicity of the scene.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%"
+                onloadedmetadata="this.playbackRate=2">
+                <source src="./assets/tora_pr_video/2-2-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">In the tranquil serenity of a quiet meadow, a single feather descends slowly
+                    and gracefully from the sky. As it floats through the gentle breeze, the camera meticulously tracks
+                    its delicate and effortless dance against a backdrop of lush green grass. The scene captures the
+                    essence of peacefulness, with the feather's light, airy movement standing out in contrast to the
+                    vibrant foliage. The feather sways gently, as if whispering secrets to the winds, before finally
+                    coming to rest softly upon the meadow's verdant carpet. This moment of natural beauty is enriched by
+                    the stillness of the atmosphere. The camera's elegant focus on the feather, uninterrupted by any
+                    additional text or objects, allows viewers to fully immerse themselves in the grace and simplicity
+                    of the scene.</h7>
                 </div>
               </div>
+            </div>
           </div>
-        
+
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%" onloadedmetadata="this.playbackRate=2">
-                  <source src="./assets/tora_pr_video/2-2-3.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">In the foreground, a delicate rose sways rhythmically in the gentle breeze, its petals captured through a soft-focus lens that imparts an ethereal quality. The background features a vibrant city park, teeming with life and energy. People bustle about, children laugh and play, and friends gather on benches and grassy areas. This scene highlights the striking contrast between the graceful, solitary movement of the rose and the dynamic, lively atmosphere of the park that stretches out behind it. The video beautifully juxtaposes the serene elegance of nature with the vibrant pulse of urban life.</h7>
-                  </div>
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%"
+                onloadedmetadata="this.playbackRate=2">
+                <source src="./assets/tora_pr_video/2-2-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">In the foreground, a delicate rose sways rhythmically in the gentle breeze, its
+                    petals captured through a soft-focus lens that imparts an ethereal quality. The background features
+                    a vibrant city park, teeming with life and energy. People bustle about, children laugh and play, and
+                    friends gather on benches and grassy areas. This scene highlights the striking contrast between the
+                    graceful, solitary movement of the rose and the dynamic, lively atmosphere of the park that
+                    stretches out behind it. The video beautifully juxtaposes the serene elegance of nature with the
+                    vibrant pulse of urban life.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
         </div>
@@ -597,135 +748,150 @@
 
               <img class="card-img-top card-img-bottom" src="./assets/images/square.jpg" alt="" width="100%">
 
-                <div class="hover-text">
-                  <div class="card-body">
-                    <h7 class="card-title">A dynamic aerial shot showcases a mountain waterfall cascading down in the early morning light. The video captures the powerful flow of the waterfall, with surrounding mist and rays of sunlight piercing through, creating a dramatic and enchanting effect. The rugged landscape of the mountain, combined with the cascading water and ethereal mist, paints a picture of natural beauty and raw power. No additional text or objects intrude upon the scene, allowing viewers to fully absorb the stunning, ever-changing interplay of light, water, and mist in this breathtaking natural setting.</h7>
-                  </div>
+              <div class="hover-text">
+                <div class="card-body">
+                  <h7 class="card-title">A dynamic aerial shot showcases a mountain waterfall cascading down in the
+                    early morning light. The video captures the powerful flow of the waterfall, with surrounding mist
+                    and rays of sunlight piercing through, creating a dramatic and enchanting effect. The rugged
+                    landscape of the mountain, combined with the cascading water and ethereal mist, paints a picture of
+                    natural beauty and raw power. No additional text or objects intrude upon the scene, allowing viewers
+                    to fully absorb the stunning, ever-changing interplay of light, water, and mist in this breathtaking
+                    natural setting.</h7>
                 </div>
               </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-4-0.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-4-0.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h7 class="card-title">A dynamic aerial shot showcasing a mountain waterfall cascading down in the early morning light. The video captures the powerful flow of the waterfall with surrounding mist and sunlight creating a dramatic effect.</h7>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-4-1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-4-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h7 class="card-title">A dynamic aerial shot showcasing a mountain waterfall cascading down in the early morning light. The video captures the powerful flow of the waterfall with surrounding mist and sunlight creating a dramatic effect.</h7>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
           <div class="col" data-item>
-            <div class="" >
-                <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
-                  <source src="./assets/tora_pr_video/2-4-2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <!-- <div class="hover-text">
+            <div class="">
+              <video class="card-img-top card-img-bottom" controls muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/tora_pr_video/2-4-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <div class="hover-text">
                   <div class="card-body">
                     <h7 class="card-title">A dynamic aerial shot showcasing a mountain waterfall cascading down in the early morning light. The video captures the powerful flow of the waterfall with surrounding mist and sunlight creating a dramatic effect.</h7>
                   </div>
                 </div> -->
-              </div>
+            </div>
           </div>
 
         </div>
 
       </div>
-          
 
 
-    </br>
+
+      </br>
 
     </div>
 
 
-    <div class="album py-5 col-lg-5 mx-auto bg-dark">
-        <div class="container">
-            <h1>Abstract</h1>
-            </br>
+    <div class="album py-5 col-lg-5 mx-auto bg-dark text-light">
+      <div class="container">
+        <h1>Abstract</h1>
+        </br>
 
-            <p style="text-align: justify;">
-              Recent advancements in Diffusion Transformer (DiT)
-              have demonstrated remarkable proficiency in producing
-              high-quality video content. Nonetheless, the potential of
-              transformer-based diffusion models for effectively generating videos with controllable motion remains an area of
-              limited exploration. This paper introduces Tora, the first
-              trajectory-oriented DiT framework that integrates textual, visual, and trajectory conditions concurrently for video generation. Specifically, Tora consists of a Trajectory Extractor (TE), a Spatial-Temporal DiT, and a Motion-guidance
-              Fuser (MGF). The TE encodes arbitrary trajectories into hierarchical spacetime motion patches with a 3D video compression network. The MGF integrates the motion patches
-              into the DiT blocks to generate consistent videos following
-              trajectories. Our design aligns seamlessly with DiT’s scalability, allowing precise control of video content’s dynamics
-              with diverse durations, aspect ratios, and resolutions. Extensive experiments demonstrate Tora’s excellence in achieving
-              high motion fidelity, while also meticulously simulating the
-              movement of physical world.
-              
-            </p>
-        </div>
+        <p style="text-align: justify;">
+          Recent advancements in Diffusion Transformer (DiT)
+          have demonstrated remarkable proficiency in producing
+          high-quality video content. Nonetheless, the potential of
+          transformer-based diffusion models for effectively generating videos with controllable motion remains an area
+          of
+          limited exploration. This paper introduces Tora, the first
+          trajectory-oriented DiT framework that integrates textual, visual, and trajectory conditions concurrently for
+          video generation. Specifically, Tora consists of a Trajectory Extractor (TE), a Spatial-Temporal DiT, and a
+          Motion-guidance
+          Fuser (MGF). The TE encodes arbitrary trajectories into hierarchical spacetime motion patches with a 3D video
+          compression network. The MGF integrates the motion patches
+          into the DiT blocks to generate consistent videos following
+          trajectories. Our design aligns seamlessly with DiT’s scalability, allowing precise control of video content’s
+          dynamics
+          with diverse durations, aspect ratios, and resolutions. Extensive experiments demonstrate Tora’s excellence in
+          achieving
+          high motion fidelity, while also meticulously simulating the
+          movement of physical world.
+
+        </p>
+      </div>
     </div>
 
-    <div class="album py-5 bg-body-tertiary text-white">
+    <div class="album py-5 bg-body-tertiary text-body">
       <div class="container col-lg-8 mx-auto">
 
-        <h1 style="color: black;">Method</h1>
-        
-        <p style="text-align: justify; color: black;">
+        <h1>Method</h1>
+
+        <p style="text-align: justify;">
           <br>
-          Overview of the Tora Architecture. For achieving trajectory-controlled DiT-based video generation, we introduce two
-          novel modules: the Trajectory Extractor and the Motion-guidance Fuser. The Trajectory Extractor employs a 3D motion VAE to
-          embed trajectory vectors into the same latent space as video patches, effectively preserving motion information across consecutive frames. Subsequently, it uses stacked convolutional layers to extract hierarchical motion features. The Motion-guidance
-          Fuser utilizes adaptive normalization layers to seamlessly inject these multi-level motion conditions into the corresponding DiT
-          blocks, ensuring the generation of videos that consistently follow the defined trajectories. Our method aligns with the scalability
+          Overview of the Tora Architecture. For achieving trajectory-controlled DiT-based video generation, we
+          introduce two
+          novel modules: the Trajectory Extractor and the Motion-guidance Fuser. The Trajectory Extractor employs a 3D
+          motion VAE to
+          embed trajectory vectors into the same latent space as video patches, effectively preserving motion
+          information across consecutive frames. Subsequently, it uses stacked convolutional layers to extract
+          hierarchical motion features. The Motion-guidance
+          Fuser utilizes adaptive normalization layers to seamlessly inject these multi-level motion conditions into the
+          corresponding DiT
+          blocks, ensuring the generation of videos that consistently follow the defined trajectories. Our method aligns
+          with the scalability
           of DiT, enabling the creation of high-resolution, motion-controllable videos with prolonged durations
         </p>
 
-        <img src="./assets/images/method.svg" style="width: 100%;">
-        
+        <img src="./assets/images/method.svg" style="width: 100%; background-color: rgb(248, 248, 248) !important;">
+
       </div>
     </div>
 
-    <div class="bibtex-wrapper">
-    <div class="bibtex-container">
-      <h2 class="title">BibTeX</h2>
-      <pre class="bibtex" style="background-color: #343a40;">
-
-  @misc{tora,
-        title={Tora: Trajectory-oriented Diffusion Transformer for Video Generation}, 
-        author={Zhenghao Zhang and Junchao Liao and Menghao Li and Long Qin and Weizhi Wang},   
-        year={2024},
-        eprint={2407.21705},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV},
-        url={https://arxiv.org/abs/2407.21705}, 
-  }
-
-</pre>
+    <div class="album py-5 bg-body-tertiary text-body">
+      <div class="container col-lg-7 mx-auto">
+        <h1>BibTeX</h1>
+        </br>
+        <pre class="bibtex text-light" style="background-color: #545c65;">
+@inproceedings{zhang2025tora,
+  title={Tora: Trajectory-oriented diffusion transformer for video generation},
+  author={Zhang, Zhenghao and Liao, Junchao and Li, Menghao and Dai, Zuozhuo and Qiu, Bingxue and Zhu, Siyu and Qin, Long and Wang, Weizhi},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={2063--2073},
+  year={2025}
+}</pre>
+      </div>
     </div>
-  </div>
 
   </main>
-    
-<style>
+
+  <style>
     .bibtex-wrapper {
       display: flex;
-      justify-content: center; /* 确保整个容器居中 */
+      justify-content: center;
+      /* 确保整个容器居中 */
       margin: 20px 0;
     }
 
@@ -735,64 +901,68 @@
       /* padding: 10px; */
       white-space: pre;
       font-family: "Courier New", Courier, monospace;
-      text-align: left; /* 确保文本左对齐 */
+      text-align: left;
+      /* 确保文本左对齐 */
     }
 
     .bibtex-container {
-      text-align: center; /* 确保内容整体居中 */
+      text-align: center;
+      /* 确保内容整体居中 */
     }
 
     .bibtex-container pre {
-      margin: 0; /* 如果需要，可以移除 pre 的默认边距 */
-      display: inline-block; /* 使 <pre> 行内块显示 */
+      margin: 0;
+      /* 如果需要，可以移除 pre 的默认边距 */
+      display: inline-block;
+      /* 使 <pre> 行内块显示 */
     }
 
     .title {
       text-align: center;
     }
-
-</style>
-<!-- <style>
+  </style>
+  <!-- <style>
   .hover-text {
     font
   }
 </style> -->
-<script>
-    $(document).ready(function() {
-        $('#loadMoreBtn').click(function() {
-            const hiddenItems = $('[data-item]:hidden');
-            hiddenItems.slice(0, 6).fadeIn(); // Adjust this number to show more or fewer items
+  <script>
+    $(document).ready(function () {
+      $('#loadMoreBtn').click(function () {
+        const hiddenItems = $('[data-item]:hidden');
+        hiddenItems.slice(0, 6).fadeIn(); // Adjust this number to show more or fewer items
 
-            // Optionally hide the "Load More" button if there are no more hidden items
-            if (hiddenItems.length <= 6) {
-                $('#loadMoreBtn').fadeOut();
-            }
-        });
+        // Optionally hide the "Load More" button if there are no more hidden items
+        if (hiddenItems.length <= 6) {
+          $('#loadMoreBtn').fadeOut();
+        }
+      });
     });
-</script>
+  </script>
 
 
-<script>
-  // Function to shuffle an array randomly
-  function shuffleArray(array) {
+  <script>
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
       }
-  }
+    }
 
-  // Get all the video elements and shuffle their order
-  const videoContainer = document.getElementById('video-container');
-  const videoElements = Array.from(videoContainer.querySelectorAll('.col[data-item]'));
-  // shuffleArray(videoElements);
+    // Get all the video elements and shuffle their order
+    const videoContainer = document.getElementById('video-container');
+    const videoElements = Array.from(videoContainer.querySelectorAll('.col[data-item]'));
+    // shuffleArray(videoElements);
 
-  // Append the shuffled video elements back to the container
-  videoElements.forEach((element) => {
+    // Append the shuffled video elements back to the container
+    videoElements.forEach((element) => {
       videoContainer.appendChild(element);
-  });
-</script>
+    });
+  </script>
 
-<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-    </body>
+</body>
+
 </html>
